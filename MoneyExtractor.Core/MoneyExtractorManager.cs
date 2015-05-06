@@ -1,4 +1,5 @@
 ﻿using MoneyExtractor.Core.Entities;
+using MoneyExtractor.Core.Processors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,37 +35,27 @@ namespace MoneyExtractor.Core {
 
                 paymentDataResponse.TotalAmountInCents = change;
 
-                //se o valor pago = 0 não tem troco
+                //TODO: Chamar a factory enquanto houve troco, se o processador retornar nulo parar o loop
+                AbstractProcessor processor = null;
 
-                if (change == 0) {
-                    paymentDataResponse.Message = "Pagamento Efetuado. Não há troco.";
-                }
-                else {
-                    //senão, calcula a quantidade de moedas
-                    //paymentDataResponse.Message = "Pagamento efetuado com troco.";
+                while (change > 0) {
+                
+                    processor = ProcessorFactory.Create(change);
 
-                    //TODO: Montar arquivo de configuração de entrada
-
-                    Dictionary<long, long> billCollection = new Bill().CalculateChange(change);
-
-                    //TODO: Ler nas configuraçôes a ordem dos tipos de retorno (Cédula > Moeda > ...)
-                    long remainingAmount = change - billCollection.Sum(amount => amount.Key * amount.Value);
-
-                    paymentDataResponse.ChangeData = new ChangeData();
-
-                    paymentDataResponse.ChangeData.ChangeTotalResult.Add(ChangeType.Bill, billCollection);
-
-                    //TODO: Montar loop para os tipos de retorno
-                    if (remainingAmount > 0) {
-
-                        Dictionary<long, long> coinCollection = new Coin().CalculateChange(remainingAmount);
-
-                        paymentDataResponse.ChangeData.ChangeTotalResult.Add(ChangeType.Coin, coinCollection);
+                    if (processor == null ){
+                        break;
                     }
 
-                    //TODO: Montar o ChangeData com os valores retornados
+                    Dictionary<long, long> calculateChangeResult = processor.CalculateChange(change);
 
+                    paymentDataResponse.ChangeData.ChangeTotalResult.Add(processor.GetChangeType(), calculateChangeResult);
+
+                    long remainingAmount = calculateChangeResult.Sum(c => c.Key * c.Value);
+
+                    change = change - remainingAmount;
                 }
+
+                paymentDataResponse.Success = true;
             }
             catch (Exception) {
 

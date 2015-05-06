@@ -8,7 +8,9 @@ namespace MoneyExtractor.Core.Entities {
 
     public class PaymentDataResponse : AbstractResponse {
 
-        public PaymentDataResponse() { }
+        public PaymentDataResponse() {
+            this.ChangeData = new ChangeData();
+        }
 
         public long TotalAmountInCents { get; set; }
 

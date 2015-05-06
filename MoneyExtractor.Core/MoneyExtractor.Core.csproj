@@ -41,10 +41,8 @@
   <ItemGroup>
     <Compile Include="Entities\AbstractRequest.cs" />
     <Compile Include="Entities\AbstractResponse.cs" />
-    <Compile Include="Entities\Bill.cs" />
     <Compile Include="Entities\ChangeData.cs" />
     <Compile Include="Entities\ChangeType.cs" />
-    <Compile Include="Entities\Coin.cs" />
     <Compile Include="Entities\ErrorReport.cs" />
     <Compile Include="Entities\PaymentDataRequest.cs" />
     <Compile Include="Entities\PaymentDataResponse.cs" />
@@ -52,6 +50,8 @@
     <Compile Include="Processors\AbstractProcessor.cs" />
     <Compile Include="Processors\BillProcessor.cs" />
     <Compile Include="Processors\CoinProcessor.cs" />
+    <Compile Include="Processors\ProcessorFactory.cs" />
+    <Compile Include="Processors\SilverProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
