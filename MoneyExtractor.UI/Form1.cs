@@ -29,7 +29,7 @@ namespace MoneyExtractor.UI {
             this.UxTxtChange.Text = paymentDataResponse.Message;
             if (paymentDataResponse.ChangeData != null) {
 
-                String changeInfo = String.Empty;
+                String changeInfo = string.Format("Valor do troco: {0}\r\n", ((decimal)paymentDataResponse.TotalAmountInCents / 100).ToString("N2"));
 
                 foreach (KeyValuePair<ChangeType, Dictionary<long, long>> change in paymentDataResponse.ChangeData.ChangeTotalResult) {
 

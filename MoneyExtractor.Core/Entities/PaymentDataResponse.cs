@@ -12,7 +12,7 @@ namespace MoneyExtractor.Core.Entities {
             this.ChangeData = new ChangeData();
         }
 
-        public long TotalAmountInCents { get; set; }
+        public Nullable<long> TotalAmountInCents { get; set; }
 
         public ChangeData ChangeData { get; set; }
 

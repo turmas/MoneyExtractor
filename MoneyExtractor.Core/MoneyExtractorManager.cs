@@ -32,35 +32,44 @@ namespace MoneyExtractor.Core {
 
                 // Calculando troco
                 long change = paymentData.PaidAmountInCents - paymentData.ProductAmountInCents;
-
-                paymentDataResponse.TotalAmountInCents = change;
+                long totalAmountInCents = change;
 
                 //TODO: Chamar a factory enquanto houve troco, se o processador retornar nulo parar o loop
                 AbstractProcessor processor = null;
 
+                Dictionary<ChangeType, Dictionary<long, long>> changeTotalResult = new Dictionary<ChangeType, Dictionary<long, long>>();
+
                 while (change > 0) {
-                
+
                     processor = ProcessorFactory.Create(change);
 
-                    if (processor == null ){
+                    if (processor == null) {
+
+                        paymentDataResponse.Message = "Não foi possível efetuar sua compra.";
                         break;
                     }
 
                     Dictionary<long, long> calculateChangeResult = processor.CalculateChange(change);
 
-                    paymentDataResponse.ChangeData.ChangeTotalResult.Add(processor.GetChangeType(), calculateChangeResult);
+                    changeTotalResult.Add(processor.GetChangeType(), calculateChangeResult);
 
                     long remainingAmount = calculateChangeResult.Sum(c => c.Key * c.Value);
 
                     change = change - remainingAmount;
                 }
 
-                paymentDataResponse.Success = true;
+                if (change == 0) {
+
+                    paymentDataResponse.Success = true;
+
+                    paymentDataResponse.TotalAmountInCents = totalAmountInCents;
+                    paymentDataResponse.ChangeData.ChangeTotalResult = changeTotalResult;
+                }
             }
             catch (Exception) {
 
                 //LOG
-                throw;
+                paymentDataResponse.Message = "Ocorreu um erro ao processar sua compra.";
             }
 
             // TODO: Log do response.
