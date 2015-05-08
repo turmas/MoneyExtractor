@@ -30,8 +30,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dlp.Framework">
+      <HintPath>..\packages\Dlp.Framework.dll.0.6.3\lib\net45\Dlp.Framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,6 +49,8 @@
     <Compile Include="Entities\ChangeData.cs" />
     <Compile Include="Entities\ChangeType.cs" />
     <Compile Include="Entities\ErrorReport.cs" />
+    <Compile Include="Logs\LogManager.cs" />
+    <Compile Include="Logs\LogType.cs" />
     <Compile Include="Entities\PaymentDataRequest.cs" />
     <Compile Include="Entities\PaymentDataResponse.cs" />
     <Compile Include="MoneyExtractorManager.cs" />
@@ -53,6 +60,11 @@
     <Compile Include="Processors\ProcessorFactory.cs" />
     <Compile Include="Processors\SilverProcessor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utility\ConfigurationUtility.cs" />
+    <Compile Include="Utility\IConfigurationUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

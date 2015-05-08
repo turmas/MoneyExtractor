@@ -13,7 +13,6 @@ namespace MoneyExtractor.Core.Processors {
             get {
                 return new long[] { 10000, 5000, 2000, 1000, 500, 200 };
             }
-
         }
 
         public override string GetName() {

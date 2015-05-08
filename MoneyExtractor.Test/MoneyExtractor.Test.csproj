@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="MoneyExtractor.Core.Test\BillProcessorTest.cs" />
     <Compile Include="MoneyExtractor.Core.Test\CoinProcessorTest.cs" />
+    <Compile Include="MoneyExtractor.Core.Test\LogManagerTest.cs" />
+    <Compile Include="MoneyExtractor.Core.Test\Mocks\ConfigurationUtilityMock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

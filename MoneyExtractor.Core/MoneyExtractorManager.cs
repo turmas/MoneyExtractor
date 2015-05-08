@@ -1,4 +1,5 @@
 ﻿using MoneyExtractor.Core.Entities;
+using MoneyExtractor.Core.Logs;
 using MoneyExtractor.Core.Processors;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,11 @@ namespace MoneyExtractor.Core {
         /// <param name="paymentData">Dados de pagamento</param>
         /// <returns>Resultado do processamento</returns>
         public PaymentDataResponse SellProduct(PaymentDataRequest paymentData) {
+
+            //TODO LOG dos valores de entrada
+            LogManager logManager = new LogManager();
+
+            logManager.SaveLog(paymentData, LogType.Request, "SellProduct");
 
             //Armazena o resultado
             PaymentDataResponse paymentDataResponse = new PaymentDataResponse();
@@ -66,13 +72,17 @@ namespace MoneyExtractor.Core {
                     paymentDataResponse.ChangeData.ChangeTotalResult = changeTotalResult;
                 }
             }
-            catch (Exception) {
+            catch (Exception ex) {
 
                 //LOG
                 paymentDataResponse.Message = "Ocorreu um erro ao processar sua compra.";
+
+                logManager.SaveLog(ex.ToString(), LogType.Exception, "SellProduct");
             }
 
-            // TODO: Log do response.
+            // Log do response.
+
+            logManager.SaveLog(paymentDataResponse, LogType.Response, "SellProduct");
 
             //Retorno
             return paymentDataResponse;

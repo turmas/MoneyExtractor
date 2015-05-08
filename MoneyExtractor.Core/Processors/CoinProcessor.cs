@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace MoneyExtractor.Core.Processors {
 
     public sealed class CoinProcessor : AbstractProcessor {
+
         /// <summary>
         /// Lista com os valores de moeda
         /// </summary>
@@ -16,7 +17,6 @@ namespace MoneyExtractor.Core.Processors {
                 return new long[] { 100, 50, 25, 10, 5, 1 };
             }
         }
-
         
         public override string GetName() {
             return "Coin";
