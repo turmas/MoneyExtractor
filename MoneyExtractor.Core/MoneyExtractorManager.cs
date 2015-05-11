@@ -1,6 +1,8 @@
-﻿using MoneyExtractor.Core.Entities;
+﻿using Dlp.Framework.Container;
+using MoneyExtractor.Core.Entities;
 using MoneyExtractor.Core.Logs;
 using MoneyExtractor.Core.Processors;
+using MoneyExtractor.Core.Utility;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +16,14 @@ namespace MoneyExtractor.Core {
     /// </summary>
     public class MoneyExtractorManager {
 
+        public MoneyExtractorManager() {
+
+            IocFactory.Register(
+                Component.For<IConfigurationUtility>()
+                .ImplementedBy<ConfigurationUtility>()
+                );
+        }
+
         /// <summary>
         /// Processa o pagamento
         /// </summary>
@@ -21,7 +31,7 @@ namespace MoneyExtractor.Core {
         /// <returns>Resultado do processamento</returns>
         public PaymentDataResponse SellProduct(PaymentDataRequest paymentData) {
 
-            //TODO LOG dos valores de entrada
+            // LOG dos valores de entrada
             LogManager logManager = new LogManager();
 
             logManager.SaveLog(paymentData, LogType.Request, "SellProduct");

@@ -6,26 +6,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Dlp.Framework;
 using MoneyExtractor.Core.Utility;
+using Dlp.Framework.Container;
 
 namespace MoneyExtractor.Core.Logs {
 
     public class LogManager {
 
-        public LogManager(IConfigurationUtility configurationUtility = null) {
-            this.ConfigurationUtility = configurationUtility;
-        }
-
-        private IConfigurationUtility configurationUtility;
-        /// <summary>
-        /// Obtém ou define a instancia do utilitário de acesso ao arquivo de configuração.
-        /// </summary>
-        public IConfigurationUtility ConfigurationUtility {
-            get {
-                if (this.configurationUtility == null) { this.configurationUtility = new ConfigurationUtility(); }
-                return this.configurationUtility;
-            }
-            set { this.configurationUtility = value; }
-        }
+        public LogManager() { }
 
         public void SaveLog(object logData, LogType logType, string method) {
 
@@ -34,23 +21,13 @@ namespace MoneyExtractor.Core.Logs {
             string logInfo = String.Format("Date:{0};LogType:{1};Method:{2};LogData{3}",
                 DateTime.UtcNow, logType.ToString(), method, serializedData);
 
-            this.SaveToFile(logInfo);            
-        }
+            IConfigurationUtility configuration = IocFactory.Resolve<IConfigurationUtility>();
 
-        private void SaveToFile(string logInfo) {
+            AbstractLog abstractLog = LogFactory.Create(configuration.LogType);
 
-            string path = this.ConfigurationUtility.Path;
-            string fileName = this.ConfigurationUtility.FileName;
+            if (abstractLog == null) { throw new Exception(); }
 
-            if (Directory.Exists(path) == false) {
-                Directory.CreateDirectory(path);
-            }
-
-            string fullFilePath = this.ConfigurationUtility.FullPath;
-
-            StreamWriter sw = new StreamWriter(fullFilePath, true, System.Text.ASCIIEncoding.UTF8);
-            sw.WriteLine(logInfo);
-            sw.Close();
+            abstractLog.SaveLog(logInfo);
         }
     }
 }

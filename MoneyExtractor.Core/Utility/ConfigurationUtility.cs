@@ -16,5 +16,7 @@ namespace MoneyExtractor.Core.Utility {
         public string FileName { get { return ConfigurationManager.AppSettings["FileName"]; } }
 
         public string FullPath { get { return System.IO.Path.Combine(this.Path, this.FileName); } }
+
+        public int LogType { get { return Convert.ToInt32(ConfigurationManager.AppSettings["LogType"]); } }
     }
 }

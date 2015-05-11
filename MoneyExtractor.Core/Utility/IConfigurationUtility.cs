@@ -9,5 +9,7 @@ namespace MoneyExtractor.Core.Utility {
         string FullPath { get; }
         
         string Path { get; }
+
+        int LogType { get; }
     }
 }

@@ -97,6 +97,7 @@
             this.UxTxtChange.Location = new System.Drawing.Point(179, 208);
             this.UxTxtChange.Multiline = true;
             this.UxTxtChange.Name = "UxTxtChange";
+            this.UxTxtChange.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.UxTxtChange.Size = new System.Drawing.Size(351, 118);
             this.UxTxtChange.TabIndex = 4;
             // 

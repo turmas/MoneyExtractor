@@ -49,6 +49,10 @@
     <Compile Include="Entities\ChangeData.cs" />
     <Compile Include="Entities\ChangeType.cs" />
     <Compile Include="Entities\ErrorReport.cs" />
+    <Compile Include="Logs\AbstractLog.cs" />
+    <Compile Include="Logs\EventViewerLog.cs" />
+    <Compile Include="Logs\FileLog.cs" />
+    <Compile Include="Logs\LogFactory.cs" />
     <Compile Include="Logs\LogManager.cs" />
     <Compile Include="Logs\LogType.cs" />
     <Compile Include="Entities\PaymentDataRequest.cs" />

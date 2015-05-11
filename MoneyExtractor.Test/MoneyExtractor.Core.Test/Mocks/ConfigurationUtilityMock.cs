@@ -20,5 +20,9 @@ namespace MoneyExtractor.Test.MoneyExtractor.Core.Test.Mocks {
         public string Path {
             get { return @"C:\Logs"; }
         }
+
+        public int LogType {
+            get { return 1; }
+        }
     }
 }
