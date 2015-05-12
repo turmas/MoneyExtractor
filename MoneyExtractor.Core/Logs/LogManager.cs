@@ -21,9 +21,10 @@ namespace MoneyExtractor.Core.Logs {
             string logInfo = String.Format("Date:{0};LogType:{1};Method:{2};LogData{3}",
                 DateTime.UtcNow, logType.ToString(), method, serializedData);
 
+            // Solicita ao container a classe concreta que implementa a interface IConfigurationUtility.
             IConfigurationUtility configuration = IocFactory.Resolve<IConfigurationUtility>();
 
-            AbstractLog abstractLog = LogFactory.Create(configuration.LogType);
+            ILog abstractLog = LogFactory.Create(configuration.LogType);
 
             if (abstractLog == null) { throw new Exception(); }
 

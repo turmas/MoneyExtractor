@@ -1,5 +1,6 @@
 ﻿using Dlp.Framework.Container;
 using MoneyExtractor.Core.Entities;
+using MoneyExtractor.Core.Interceptors;
 using MoneyExtractor.Core.Logs;
 using MoneyExtractor.Core.Processors;
 using MoneyExtractor.Core.Utility;
@@ -18,9 +19,26 @@ namespace MoneyExtractor.Core {
 
         public MoneyExtractorManager() {
 
+            // Registra a interface para ser utilizada pela classe concreta especificada.
             IocFactory.Register(
                 Component.For<IConfigurationUtility>()
-                .ImplementedBy<ConfigurationUtility>()
+                .ImplementedBy<ConfigurationUtility>().IsSingleton()
+                );
+
+            // Registra os tipos responsáveis por log.
+            //IocFactory.Register(
+            //    Component.For<ILog>()
+            //    .ResolveDependencies()
+            //    .ImplementedBy<FileLog>("File").IsSingleton()
+            //    .ImplementedBy<EventViewerLog>("EventViewer").IsSingleton()
+            //    .Interceptor<LogInterceptor>()
+            //    );
+
+            IocFactory.Register(                
+
+                Component.For<ILog>().ImplementedBy<FileLog>().IsDefault(),
+
+                Component.FromThisAssembly("MoneyExtractor.Core.Logs")
                 );
         }
 

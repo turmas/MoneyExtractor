@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace MoneyExtractor.Core.Logs {
 
-    public abstract class AbstractLog {
+    public interface ILog {
 
-        public AbstractLog() { }
-
-        public abstract void SaveLog(string logInfo);
+        void SaveLog(string logInfo);
     }
 }

@@ -7,11 +7,12 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MoneyExtractor.Core.Logs {
-    class EventViewerLog : AbstractLog {
+
+    public class EventViewerLog : ILog {
 
         public EventViewerLog() { }
 
-        public override void SaveLog(string logInfo) {
+        public void SaveLog(string logInfo) {
 
             // Create an EventLog instance and assign its source.
             EventLog eventLog = new EventLog();
