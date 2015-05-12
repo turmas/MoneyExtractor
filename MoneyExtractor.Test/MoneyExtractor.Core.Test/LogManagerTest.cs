@@ -8,10 +8,13 @@ using MoneyExtractor.Core;
 using MoneyExtractor.Core.Entities;
 
 namespace MoneyExtractor.Test.MoneyExtractor.Core.Test {
+
     [TestClass]
     public class LogManagerTest {
+
         [TestMethod]
         public void SaveLog_SaveGuid_Test() {
+
 
             IocFactory.Register(
                 Component.For<IConfigurationUtility>()
