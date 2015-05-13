@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="05e06167-6e08-4fbe-bf82-d327623a0166" name="UMLUseCaseDiagram1" linkedPackageId="cedc743c-1039-4b8a-a06f-d3e2da918bfd" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="cbaafb46-e562-4500-80ef-241218da857a">
+      <profileInstance Id="7d694835-7d55-460e-a846-25a4b181efa8" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="5a2bf2cd-dd50-4b0c-8658-4af3cc4682c5">
+      <profileInstance Id="bbff4c17-c468-4459-a219-997180d3a314" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="4bc9c3c1-3759-4ae9-978c-4b6b0decbea0" name="Comprador" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b1dfba88-ecfd-4cab-bdca-ed753bed3455" />
+        <targetEnds>
+          <association Id="d65da836-692e-4802-9cba-1c909eada0e3" isDerived="false" sourceEndRoleName="Comprador" targetEndRoleName="Selecionar o produto" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3de9c5f5-4d73-486e-bc7c-b8da92595471" LastKnownName="Selecionar o produto" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="880e456b-e82b-4754-bb3b-376e68b4cb83" name="Comprador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="fb2d0f6a-90a6-4b95-b8ef-74576f468231" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e95b9934-6145-466f-a3b7-e6dd282fafde" name="Selecionar o produto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="07f22438-6b59-41e0-9b05-e14b92a42216" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="c4fc7b6b-76c7-4971-a8a1-b29f0d74cce7" />
+          </association>
+          <association Id="b648bfa9-8c6d-4567-9f3b-38401f524cab" isDerived="false" sourceEndRoleName="Comprador" targetEndRoleName="Inserir o valor" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="a0eb5ca3-18a9-47b3-a4fe-55f46b6145dd" LastKnownName="Inserir o valor" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e0969a85-1453-4de0-a49d-f0d6de394904" name="Comprador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="1320feb6-4a08-4315-aeab-1ed38f704195" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="70cbf231-a69f-4583-97c1-2579cf9a5916" name="Inserir o valor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9d574c97-c7e6-4f35-b8e8-b87154c3b844" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9c341e31-24ef-4baa-9eba-e24c622e2d14" />
+          </association>
+          <association Id="6c939936-2c06-4c09-9946-27297bbff3e3" isDerived="false" sourceEndRoleName="Comprador" targetEndRoleName="Retirar o produto" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="4299ca5b-582f-4c42-b6dd-d1cdadd10d2b" LastKnownName="Retirar o produto" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="77e0d524-b6e9-41b0-b6df-fc40d9a91eac" name="Comprador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="90db336d-ee16-4e5c-a2c0-4ca8d83f678e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8931b373-2d3b-4832-bb9b-cf5a8c0f15a5" name="Retirar o produto" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9d494113-b36c-429f-93a7-0e0f040f79e8" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="b6f51ce2-86c0-478f-b913-aab0d973b721" />
+          </association>
+          <association Id="71a63dfe-57ff-4d2d-9feb-ea5976ab9b6e" isDerived="false" sourceEndRoleName="Comprador" targetEndRoleName="Retirar o troco" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d08c9aef-3b1a-4796-a97b-edd35acc0bb3" LastKnownName="Retirar o troco" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d117c137-2008-47e2-896a-1f21fdd623f8" name="Comprador" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="ab0381f3-6aaf-424a-9539-8a17b5d5f682" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9490bec1-11a5-42fc-8240-624d2b688f04" name="Retirar o troco" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="20191f16-3998-4972-80ab-22ed1e38161b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e5135f48-9205-4d98-8e95-45017142f742" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="3de9c5f5-4d73-486e-bc7c-b8da92595471" name="Selecionar o produto" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="29ff5317-4e70-4088-8a3c-7be05a11b638" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="a0eb5ca3-18a9-47b3-a4fe-55f46b6145dd" name="Inserir o valor" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f5ee697f-272b-48e5-8e3d-d76f8714738f" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4299ca5b-582f-4c42-b6dd-d1cdadd10d2b" name="Retirar o produto" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4ea714b2-3fc2-456a-bb3b-a68b98c7909e" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d08c9aef-3b1a-4796-a97b-edd35acc0bb3" name="Retirar o troco" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e9afe4ea-45e8-46f9-a4fd-bddca94ea271" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="13a2fbe8-d974-485f-a466-ecaf5610be82" name="Calcular Troco" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ce1f32af-2b85-4e3a-93e8-6ad85b646c3b" />
+        <suppliersInternal>
+          <dependency Id="f9eb59bf-4a4b-4b04-bc32-d4a1555f83d7">
+            <useCaseMoniker Id="1382b428-b433-4edf-b9f0-6d9831cce960" LastKnownName="Liberar produto" />
+            <elementDefinition Id="6ef5ae8f-d9fb-40ff-a5f3-65bc6e46119a" />
+          </dependency>
+          <dependency Id="5e8c3b30-41c0-4f2d-b237-59ad447a13b2">
+            <useCaseMoniker Id="c382952c-7e6e-4f71-927a-27d932f2f7d0" LastKnownName="Liberar troco" />
+            <elementDefinition Id="07ae45d1-3216-4ee7-82e0-e6255cf92439" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="1382b428-b433-4edf-b9f0-6d9831cce960" name="Liberar produto" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7a62d17d-d93e-4529-a145-7397733a1191" />
+        <suppliersInternal>
+          <dependency Id="144ba420-1c20-4ac6-aa6f-e34f58f9a2c6">
+            <useCaseMoniker Id="4299ca5b-582f-4c42-b6dd-d1cdadd10d2b" LastKnownName="Retirar o produto" />
+            <elementDefinition Id="bec10ba7-d201-41ca-84be-165c9077ce9a" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c382952c-7e6e-4f71-927a-27d932f2f7d0" name="Liberar troco" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="468776cf-6604-4de6-84a7-80d147b12af7" />
+        <suppliersInternal>
+          <dependency Id="01e6ad33-ea4b-44fc-bb83-b87322855558">
+            <useCaseMoniker Id="d08c9aef-3b1a-4796-a97b-edd35acc0bb3" LastKnownName="Retirar o troco" />
+            <elementDefinition Id="911464b5-fc38-4b25-bab1-fbdf9d909099" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="cedc743c-1039-4b8a-a06f-d3e2da918bfd" name="ModelingProject">
+    <elementDefinition Id="4f4698ca-bb71-4ab2-bd8f-4f1dd80915f7" />
+  </package>
+</useCaseModelRoot>

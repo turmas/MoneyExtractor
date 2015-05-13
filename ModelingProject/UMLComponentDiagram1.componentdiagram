@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="cd4c0b00-b3ff-4746-a1ec-13fb41a259bb" name="UMLComponentDiagram1" linkedPackageId="9955f7f6-bde9-4961-b43d-81af551b96bd" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="9d8cc5e9-5f3d-47ac-b856-8948c45f9f75">
+      <profileInstance Id="db1f144e-a3d9-46ef-a447-8c71b24df055" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="278657b4-d1c1-418a-ba1d-95aafb2233c7">
+      <profileInstance Id="745e5724-033d-48c5-8102-eb4eab29f070" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="14d9d10c-80d9-4f47-b168-901050b817b4" name="Global Identity - MVC" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="aba16dbf-4c08-47b8-8dae-a3034bc087a7" />
+        <ownedAttributesInternal>
+          <requiredInterface Id="bc3d63e3-d0ee-442d-b6cb-be02b897db40" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="8493dc65-db01-4563-b554-03fd0c9d13f8" />
+            <suppliersInternal>
+              <dependency Id="1f0c72c3-0947-43fa-a166-cb04828974f9" name="NET.TCP">
+                <providedInterfaceMoniker Id="2d7c92b1-03e2-4707-b2f2-448cb44cea7d" LastKnownName="Port2" />
+                <elementDefinition Id="59a9d09b-0b43-4f6c-818d-28c74f9bc594" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="fcbca27f-c1f0-44e3-8e91-ab03fc41911f" LastKnownName="IAccountManagement" />
+            </type_NamedElement>
+          </requiredInterface>
+          <part Id="1884b8b5-f66f-4007-9162-406fec20ff9a" name="WebAPI" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="true">
+            <elementDefinition Id="c684ac60-cd08-4623-8eeb-f5a605d25a52" />
+            <targetNamedElementsInternal>
+              <connector Id="1299ba6f-430b-4f8c-bba4-4b21b790e744" isLeaf="false" isStatic="false">
+                <requiredInterfaceMoniker Id="bb9f1259-fae8-40cd-b417-e6c25dfa547b" LastKnownName="Port2" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="68998edf-ee30-414e-9e86-d06f946d2564">
+                      <elementDefinition Id="7914e6f8-2bc1-457c-8110-93792ef57a1f" />
+                      <portWithPart>
+                        <requiredInterfaceMoniker Id="b866b687-f979-41f4-b158-100ee53e185a" LastKnownName="Port1" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd Id="fad6d97f-4cce-4f5c-ac0c-17b556b929d7">
+                      <elementDefinition Id="785c7c1c-1679-4603-a901-cd9bbe0f6337" />
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+                <elementDefinition Id="7803a5c4-bb0e-4267-9c14-475e22eeae66" />
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <componentMoniker Id="c7689c43-9aed-4398-a194-bc10b4dd3adc" LastKnownName="Component2" />
+            </type_NamedElement>
+          </part>
+          <requiredInterface Id="bb9f1259-fae8-40cd-b417-e6c25dfa547b" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="807fae4b-3542-4b9a-b4b7-485158435cc6" />
+            <suppliersInternal>
+              <dependency Id="3501704e-e076-4fc8-aa21-c31592bb165b" name="REST">
+                <providedInterfaceMoniker Id="e0e46094-5218-4858-92cb-a6d7b48c4ea0" LastKnownName="Port1" />
+                <elementDefinition Id="e841523a-355e-4260-81c7-0ff7dc7c612e" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="6473875b-91b6-4223-a0fd-c8aef236e0db" LastKnownName="IAuthenticationService" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="72b3b440-a7e4-457c-88f6-91422619d26c" name="Serviço WCF" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="56d4dc8b-46cc-43ec-aec4-dda40f22f4b7" />
+        <ownedAttributesInternal>
+          <providedInterface Id="e0e46094-5218-4858-92cb-a6d7b48c4ea0" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="6b089567-bec6-4977-b8fa-c7ea041aa1ab" />
+            <type_NamedElement>
+              <interfaceMoniker Id="d1cdb097-9e81-41e8-a85b-f9cbf7547ada" LastKnownName="IAuthenticationService" />
+            </type_NamedElement>
+          </providedInterface>
+          <providedInterface Id="2d7c92b1-03e2-4707-b2f2-448cb44cea7d" name="Port2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="804686e1-a5ff-4456-a562-d8a200b3b321" />
+            <type_NamedElement>
+              <interfaceMoniker Id="1a5e1dfc-3371-4846-9df5-7217ed2ac5f5" LastKnownName="IAccountManagement" />
+            </type_NamedElement>
+          </providedInterface>
+          <requiredInterface Id="4ebe931e-e0b1-40eb-8a9f-de0aa9a97d53" name="Port3" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="e18a9683-b5a1-43b2-951a-15bac80f79f0" />
+            <suppliersInternal>
+              <dependency Id="882053a8-1c2a-4678-ba45-a3eebc899147">
+                <providedInterfaceMoniker Id="af041b96-3d89-4c50-868b-ab9ff36e4398" LastKnownName="Port1" />
+                <elementDefinition Id="8343dd22-ae7d-4c1a-b0ca-0623eaf312f2" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker Id="b0efeefd-4d4f-49c9-bfdd-16505bdfe1de" LastKnownName="SQL" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="6447fc86-3a78-4ee9-94f1-c9ca7fa6caa1" name="Banco de dados de Usuários" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9fa17532-a87f-4a38-bc34-7364af086e80" />
+        <ownedAttributesInternal>
+          <providedInterface Id="af041b96-3d89-4c50-868b-ab9ff36e4398" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="51600198-c2eb-41cb-a9e3-fbfe28a54495" />
+            <type_NamedElement>
+              <interfaceMoniker Id="eb0bbbb5-5f7a-4a03-ae68-55a4ed9e4643" LastKnownName="SQL" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="d1cdb097-9e81-41e8-a85b-f9cbf7547ada" name="IAuthenticationService" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e6d5e566-ed57-4813-a7d4-63a246a96c7a" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="1a5e1dfc-3371-4846-9df5-7217ed2ac5f5" name="IAccountManagement" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ab3cd7b9-a4d7-4dec-b6db-b089e9c93ad5" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="fcbca27f-c1f0-44e3-8e91-ab03fc41911f" name="IAccountManagement" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="745915df-258f-4c0d-8c79-21b01ba688a8" />
+      </Interface>
+    </modelContainsNamedElements>
+    <componentModelHasComponents>
+      <component Id="c7689c43-9aed-4398-a194-bc10b4dd3adc" name="Component2" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="134f5ad1-be3c-4c8e-a294-31dad288f9c3" />
+        <ownedAttributesInternal>
+          <requiredInterface Id="b866b687-f979-41f4-b158-100ee53e185a" name="Port1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isService="false" isBehavior="false">
+            <elementDefinition Id="8bc3b89c-979c-4080-8ebd-d99bb9cd2c21" />
+            <type_NamedElement>
+              <interfaceMoniker Id="e699df69-9040-4042-a54a-edafed369c4d" LastKnownName="IAuthenticationService" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </componentModelHasComponents>
+    <modelContainsNamedElements>
+      <Interface Id="e699df69-9040-4042-a54a-edafed369c4d" name="IAuthenticationService" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7aa1c914-e03f-4ed2-8749-252585aacb14" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="6473875b-91b6-4223-a0fd-c8aef236e0db" name="IAuthenticationService" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bf3c4ff3-6a53-4501-b448-742d5beccf65" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="b0efeefd-4d4f-49c9-bfdd-16505bdfe1de" name="SQL" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="58d6eb4f-788d-4e0e-9000-8d6664e084cb" />
+      </Interface>
+    </modelContainsNamedElements>
+    <modelContainsNamedElements>
+      <Interface Id="eb0bbbb5-5f7a-4a03-ae68-55a4ed9e4643" name="SQL" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="5a7815ea-506a-498e-9eb5-b44ddf94568f" />
+      </Interface>
+    </modelContainsNamedElements>
+  </packagedElements>
+  <package Id="9955f7f6-bde9-4961-b43d-81af551b96bd" name="ModelingProject">
+    <elementDefinition Id="4f4698ca-bb71-4ab2-bd8f-4f1dd80915f7" />
+  </package>
+</componentModel>

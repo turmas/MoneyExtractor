@@ -61,6 +61,7 @@
     <Compile Include="MoneyExtractorManager.cs" />
     <Compile Include="Processors\AbstractProcessor.cs" />
     <Compile Include="Processors\BillProcessor.cs" />
+    <Compile Include="Processors\CandyProcessor.cs" />
     <Compile Include="Processors\CoinProcessor.cs" />
     <Compile Include="Processors\ProcessorFactory.cs" />
     <Compile Include="Processors\SilverProcessor.cs" />

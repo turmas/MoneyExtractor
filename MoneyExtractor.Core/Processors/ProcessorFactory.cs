@@ -18,6 +18,7 @@ namespace MoneyExtractor.Core.Processors {
                 new BillProcessor(), 
                 new CoinProcessor(),
                 new SilverProcessor(),
+                new CandyProcessor(),
 
                 //Adicionar novos processador acima desta linha
             };

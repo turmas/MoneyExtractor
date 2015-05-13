@@ -10,6 +10,7 @@ namespace MoneyExtractor.Core.Entities {
         Undefined,
         Bill,
         Coin,
-        Silver
+        Silver,
+        Candy
     }
 }

@@ -6,24 +6,18 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace MoneyExtractor.Core.Processors {
+    public sealed class CandyProcessor : AbstractProcessor{
 
-    public sealed class CoinProcessor : AbstractProcessor {
-
-        /// <summary>
-        /// Lista com os valores de moeda
-        /// </summary>
         internal override IEnumerable<long> MoneyTypeList {
-            get {
-                return new long[] { 100, 50, 25, 10, 5 };
-            }
+            get { return new long[] { 3,1 }; }
         }
-        
+
         public override string GetName() {
-            return "Coin";
+            return "Candy";
         }
 
         public override Entities.ChangeType GetChangeType() {
-            return ChangeType.Coin;
+            return ChangeType.Candy;
         }
     }
 }

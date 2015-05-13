@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="1daba41b-3b88-4de3-ad01-48b083360e0c" name="Activity1" linkedPackageId="783226df-b7d5-40ef-93fd-eb509b517089" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <ownedCommentsInternal>
+    <comment Id="6c0e824a-4988-4f7d-bc2b-281f54a38b4c">
+      <elementDefinition Id="c2485f08-3eb3-4b06-ac40-23b88a020ac6" />
+      <body>Troco será apenas em moedas</body>
+      <annotatedElements>
+        <opaqueActionMoniker Id="80c8bd36-63ed-48ba-8f92-28bf1c635391" LastKnownName="Calcular troco" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances Id="0e2c35f2-6488-4ffa-85a9-e5c16ffcbcbc">
+      <profileInstance Id="bfe73e31-396a-4497-a5b3-8e50374ab161" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="4ed39c02-8b9e-4f50-bf66-881979d421fc">
+      <profileInstance Id="dee614c4-2880-47f7-9a96-9f04f25168c7" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="513c4610-dead-46c3-b8c5-1fac61d9cf99" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="2576da58-b429-4d14-9681-7806a081525b" />
+        <nodes>
+          <initialNode Id="1151fff4-0e7c-46cb-a069-c7ef8e641dd8" name="Initial1" isLeaf="false">
+            <elementDefinition Id="8060ad34-1e47-4033-b1f6-7fe3d1517073" />
+            <flowNodeTargets>
+              <controlFlow Id="65745f62-4e86-4cf1-ab0e-3973ccac4489" isLeaf="false">
+                <opaqueActionMoniker Id="13a54691-1ca5-4770-b181-f85929da89f6" LastKnownName="Salvar log dos dados recebidos" />
+                <elementDefinition Id="3130f77c-47b8-4442-bf6a-2d1f662f6b6e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="e2baf77e-478b-40dc-8a48-b027a938a35b" name="Validar dados recebidos" isLeaf="false">
+            <elementDefinition Id="11920551-dfa6-472f-8c7c-91ac7f1101d3" />
+            <flowNodeTargets>
+              <controlFlow Id="d3fb276b-3568-4e17-a6b1-cea32938e26c" isLeaf="false">
+                <decisionNodeMoniker Id="3df604bc-8730-4cba-a502-0ad266b48e3d" LastKnownName="Decision1" />
+                <elementDefinition Id="45e57e02-54eb-4f36-bfcb-b2b2010df258" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="13a54691-1ca5-4770-b181-f85929da89f6" name="Salvar log dos dados recebidos" isLeaf="false">
+            <elementDefinition Id="02449de9-8b91-4b54-83e2-a4c09df0b451" />
+            <flowNodeTargets>
+              <controlFlow Id="b5979d81-44df-44c4-aa03-03b396597013" isLeaf="false">
+                <opaqueActionMoniker Id="e2baf77e-478b-40dc-8a48-b027a938a35b" LastKnownName="Validar dados recebidos" />
+                <elementDefinition Id="792a4bc3-570c-4a63-bde0-b7af0011a948" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="80c8bd36-63ed-48ba-8f92-28bf1c635391" name="Calcular troco" isLeaf="false">
+            <elementDefinition Id="9a9c6001-4c84-4665-be66-e3d088153d16" />
+            <flowNodeTargets>
+              <controlFlow Id="10c12a1e-5d02-4824-a72b-30405dcd5527" isLeaf="false">
+                <opaqueActionMoniker Id="ca91b483-5b24-4810-8c68-5e6b1e8a0c9a" LastKnownName="Contar as moedas" />
+                <elementDefinition Id="97c4dced-46c9-46c5-a44b-01634bbf878d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="3df604bc-8730-4cba-a502-0ad266b48e3d" name="Decision1" isLeaf="false">
+            <elementDefinition Id="6e7e49a9-851b-46cb-a74d-fd75d9653f80" />
+            <flowNodeTargets>
+              <controlFlow Id="eeca3a42-71ca-480a-88d5-7d64e58e2185" guard="Dados válidos" isLeaf="false">
+                <opaqueActionMoniker Id="80c8bd36-63ed-48ba-8f92-28bf1c635391" LastKnownName="Calcular troco" />
+                <elementDefinition Id="26ae940e-b5aa-4b54-9a56-e87aa07f7601" />
+              </controlFlow>
+              <controlFlow Id="61a18ff7-731d-48ef-bbee-01ef42d2f99b" guard="Dados inválidos" isLeaf="false">
+                <opaqueActionMoniker Id="b2aeca82-df0a-4bc7-939e-cedfcf384579" LastKnownName="Salvar log de resposta" />
+                <elementDefinition Id="835b3009-1952-4776-b1f8-e353b58729a7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="b2aeca82-df0a-4bc7-939e-cedfcf384579" name="Salvar log de resposta" isLeaf="false">
+            <elementDefinition Id="17d443e9-8c3d-490a-b91d-700a916073b5" />
+            <flowNodeTargets>
+              <controlFlow Id="c1b16bc2-3e51-4503-b7a5-475718bedd92" isLeaf="false">
+                <activityFinalNodeMoniker Id="d01a62ae-d4c9-43f3-8b15-1c3f420360b3" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="e4579d2c-30d7-4696-af8e-c8be3d2e6ae6" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="d01a62ae-d4c9-43f3-8b15-1c3f420360b3" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="98a3ba2d-26c4-4242-b9f3-eae8bf302f15" />
+          </activityFinalNode>
+          <opaqueAction Id="ca91b483-5b24-4810-8c68-5e6b1e8a0c9a" name="Contar as moedas" isLeaf="false">
+            <elementDefinition Id="d7a7c3f5-279d-4126-abbd-43dc0870dc69" />
+            <flowNodeTargets>
+              <controlFlow Id="8c9116cf-98a0-4705-8ce5-757f8f7bc211" isLeaf="false">
+                <opaqueActionMoniker Id="b2aeca82-df0a-4bc7-939e-cedfcf384579" LastKnownName="Salvar log de resposta" />
+                <elementDefinition Id="66b3407b-c094-4899-939c-2866c6441996" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="783226df-b7d5-40ef-93fd-eb509b517089" name="ModelingProject">
+    <elementDefinition Id="4f4698ca-bb71-4ab2-bd8f-4f1dd80915f7" />
+  </package>
+</activityRootModel>

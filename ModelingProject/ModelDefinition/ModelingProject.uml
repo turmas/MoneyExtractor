@@ -1,0 +1,754 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+  dslVersion="1.0.0.0"
+  Id="4f4698ca-bb71-4ab2-bd8f-4f1dd80915f7"
+  name="ModelingProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="c2485f08-3eb3-4b06-ac40-23b88a020ac6">
+      <body>Troco será apenas em moedas</body>
+      <annotatedElements>
+        <opaqueActionMoniker
+          Id="9a9c6001-4c84-4665-be66-e3d088153d16"
+          LastKnownName="Calcular troco"
+          LastKnownLocation="ModelingProject.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <activity
+        Id="2576da58-b429-4d14-9681-7806a081525b"
+        name="Activity1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="8060ad34-1e47-4033-b1f6-7fe3d1517073"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3130f77c-47b8-4442-bf6a-2d1f662f6b6e"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="02449de9-8b91-4b54-83e2-a4c09df0b451"
+                  LastKnownName="Salvar log dos dados recebidos"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="11920551-dfa6-472f-8c7c-91ac7f1101d3"
+            name="Validar dados recebidos"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="45e57e02-54eb-4f36-bfcb-b2b2010df258"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="6e7e49a9-851b-46cb-a74d-fd75d9653f80"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="02449de9-8b91-4b54-83e2-a4c09df0b451"
+            name="Salvar log dos dados recebidos"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="792a4bc3-570c-4a63-bde0-b7af0011a948"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="11920551-dfa6-472f-8c7c-91ac7f1101d3"
+                  LastKnownName="Validar dados recebidos"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="9a9c6001-4c84-4665-be66-e3d088153d16"
+            name="Calcular troco"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="97c4dced-46c9-46c5-a44b-01634bbf878d"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d7a7c3f5-279d-4126-abbd-43dc0870dc69"
+                  LastKnownName="Contar as moedas"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="6e7e49a9-851b-46cb-a74d-fd75d9653f80"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="26ae940e-b5aa-4b54-9a56-e87aa07f7601"
+                guard="Dados válidos"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="9a9c6001-4c84-4665-be66-e3d088153d16"
+                  LastKnownName="Calcular troco"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="835b3009-1952-4776-b1f8-e353b58729a7"
+                guard="Dados inválidos"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="17d443e9-8c3d-490a-b91d-700a916073b5"
+                  LastKnownName="Salvar log de resposta"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="17d443e9-8c3d-490a-b91d-700a916073b5"
+            name="Salvar log de resposta"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="e4579d2c-30d7-4696-af8e-c8be3d2e6ae6"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="98a3ba2d-26c4-4242-b9f3-eae8bf302f15"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="98a3ba2d-26c4-4242-b9f3-eae8bf302f15"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <opaqueAction
+            Id="d7a7c3f5-279d-4126-abbd-43dc0870dc69"
+            name="Contar as moedas"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="66b3407b-c094-4899-939c-2866c6441996"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="17d443e9-8c3d-490a-b91d-700a916073b5"
+                  LastKnownName="Salvar log de resposta"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="b1dfba88-ecfd-4cab-bdca-ed753bed3455"
+        name="Comprador"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="c4fc7b6b-76c7-4971-a8a1-b29f0d74cce7"
+            isDerived="false"
+            sourceEndRoleName="Comprador"
+            targetEndRoleName="Selecionar o produto"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="29ff5317-4e70-4088-8a3c-7be05a11b638"
+              LastKnownName="Selecionar o produto"
+              LastKnownLocation="ModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fb2d0f6a-90a6-4b95-b8ef-74576f468231"
+                  name="Comprador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="07f22438-6b59-41e0-9b05-e14b92a42216"
+                  name="Selecionar o produto"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9c341e31-24ef-4baa-9eba-e24c622e2d14"
+            isDerived="false"
+            sourceEndRoleName="Comprador"
+            targetEndRoleName="Inserir o valor"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f5ee697f-272b-48e5-8e3d-d76f8714738f"
+              LastKnownName="Inserir o valor"
+              LastKnownLocation="ModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1320feb6-4a08-4315-aeab-1ed38f704195"
+                  name="Comprador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9d574c97-c7e6-4f35-b8e8-b87154c3b844"
+                  name="Inserir o valor"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="b6f51ce2-86c0-478f-b913-aab0d973b721"
+            isDerived="false"
+            sourceEndRoleName="Comprador"
+            targetEndRoleName="Retirar o produto"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="4ea714b2-3fc2-456a-bb3b-a68b98c7909e"
+              LastKnownName="Retirar o produto"
+              LastKnownLocation="ModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="90db336d-ee16-4e5c-a2c0-4ca8d83f678e"
+                  name="Comprador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9d494113-b36c-429f-93a7-0e0f040f79e8"
+                  name="Retirar o produto"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e5135f48-9205-4d98-8e95-45017142f742"
+            isDerived="false"
+            sourceEndRoleName="Comprador"
+            targetEndRoleName="Retirar o troco"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e9afe4ea-45e8-46f9-a4fd-bddca94ea271"
+              LastKnownName="Retirar o troco"
+              LastKnownLocation="ModelingProject.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ab0381f3-6aaf-424a-9539-8a17b5d5f682"
+                  name="Comprador"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="20191f16-3998-4972-80ab-22ed1e38161b"
+                  name="Retirar o troco"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="29ff5317-4e70-4088-8a3c-7be05a11b638"
+        name="Selecionar o produto"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f5ee697f-272b-48e5-8e3d-d76f8714738f"
+        name="Inserir o valor"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4ea714b2-3fc2-456a-bb3b-a68b98c7909e"
+        name="Retirar o produto"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e9afe4ea-45e8-46f9-a4fd-bddca94ea271"
+        name="Retirar o troco"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ce1f32af-2b85-4e3a-93e8-6ad85b646c3b"
+        name="Calcular Troco"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="6ef5ae8f-d9fb-40ff-a5f3-65bc6e46119a">
+            <useCaseMoniker
+              Id="7a62d17d-d93e-4529-a145-7397733a1191"
+              LastKnownName="Liberar produto"
+              LastKnownLocation="ModelingProject.uml" />
+          </dependency>
+          <dependency
+            Id="07ae45d1-3216-4ee7-82e0-e6255cf92439">
+            <useCaseMoniker
+              Id="468776cf-6604-4de6-84a7-80d147b12af7"
+              LastKnownName="Liberar troco"
+              LastKnownLocation="ModelingProject.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7a62d17d-d93e-4529-a145-7397733a1191"
+        name="Liberar produto"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="bec10ba7-d201-41ca-84be-165c9077ce9a">
+            <useCaseMoniker
+              Id="4ea714b2-3fc2-456a-bb3b-a68b98c7909e"
+              LastKnownName="Retirar o produto"
+              LastKnownLocation="ModelingProject.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="468776cf-6604-4de6-84a7-80d147b12af7"
+        name="Liberar troco"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="911464b5-fc38-4b25-bab1-fbdf9d909099">
+            <useCaseMoniker
+              Id="e9afe4ea-45e8-46f9-a4fd-bddca94ea271"
+              LastKnownName="Retirar o troco"
+              LastKnownLocation="ModelingProject.uml" />
+          </dependency>
+        </suppliersInternal>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="c07b207d-ad1f-4251-9e72-871e88f37de4"
+        name="Hardware"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="aba16dbf-4c08-47b8-8dae-a3034bc087a7"
+        name="Global Identity - MVC"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <requiredInterface
+            Id="8493dc65-db01-4563-b554-03fd0c9d13f8"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="59a9d09b-0b43-4f6c-818d-28c74f9bc594"
+                name="NET.TCP">
+                <providedInterfaceMoniker
+                  Id="804686e1-a5ff-4456-a562-d8a200b3b321"
+                  LastKnownName="Port2"
+                  LastKnownLocation="ModelingProject.uml" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="745915df-258f-4c0d-8c79-21b01ba688a8"
+                LastKnownName="IAccountManagement"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+          <part
+            Id="c684ac60-cd08-4623-8eeb-f5a605d25a52"
+            name="WebAPI"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="Composite"
+            isComposite="true">
+            <targetNamedElementsInternal>
+              <connector
+                Id="7803a5c4-bb0e-4267-9c14-475e22eeae66"
+                isLeaf="false"
+                isStatic="false">
+                <requiredInterfaceMoniker
+                  Id="807fae4b-3542-4b9a-b4b7-485158435cc6"
+                  LastKnownName="Port2"
+                  LastKnownLocation="ModelingProject.uml" />
+                <relationshipOwnedElementsInternal>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd
+                      Id="7914e6f8-2bc1-457c-8110-93792ef57a1f">
+                      <portWithPart>
+                        <requiredInterfaceMoniker
+                          Id="8bc3b89c-979c-4080-8ebd-d99bb9cd2c21"
+                          LastKnownName="Port1"
+                          LastKnownLocation="ModelingProject.uml" />
+                      </portWithPart>
+                    </connectorEnd>
+                  </connectorHasConnectorEnds>
+                  <connectorHasConnectorEnds>
+                    <connectorEnd
+                      Id="785c7c1c-1679-4603-a901-cd9bbe0f6337" />
+                  </connectorHasConnectorEnds>
+                </relationshipOwnedElementsInternal>
+              </connector>
+            </targetNamedElementsInternal>
+            <type_NamedElement>
+              <componentMoniker
+                Id="134f5ad1-be3c-4c8e-a294-31dad288f9c3"
+                LastKnownName="Component2"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </part>
+          <requiredInterface
+            Id="807fae4b-3542-4b9a-b4b7-485158435cc6"
+            name="Port2"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="e841523a-355e-4260-81c7-0ff7dc7c612e"
+                name="REST">
+                <providedInterfaceMoniker
+                  Id="6b089567-bec6-4977-b8fa-c7ea041aa1ab"
+                  LastKnownName="Port1"
+                  LastKnownLocation="ModelingProject.uml" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="bf3c4ff3-6a53-4501-b448-742d5beccf65"
+                LastKnownName="IAuthenticationService"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="56d4dc8b-46cc-43ec-aec4-dda40f22f4b7"
+        name="Serviço WCF"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="6b089567-bec6-4977-b8fa-c7ea041aa1ab"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="e6d5e566-ed57-4813-a7d4-63a246a96c7a"
+                LastKnownName="IAuthenticationService"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </providedInterface>
+          <providedInterface
+            Id="804686e1-a5ff-4456-a562-d8a200b3b321"
+            name="Port2"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="ab3cd7b9-a4d7-4dec-b6db-b089e9c93ad5"
+                LastKnownName="IAccountManagement"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </providedInterface>
+          <requiredInterface
+            Id="e18a9683-b5a1-43b2-951a-15bac80f79f0"
+            name="Port3"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <suppliersInternal>
+              <dependency
+                Id="8343dd22-ae7d-4c1a-b0ca-0623eaf312f2">
+                <providedInterfaceMoniker
+                  Id="51600198-c2eb-41cb-a9e3-fbfe28a54495"
+                  LastKnownName="Port1"
+                  LastKnownLocation="ModelingProject.uml" />
+              </dependency>
+            </suppliersInternal>
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="58d6eb4f-788d-4e0e-9000-8d6664e084cb"
+                LastKnownName="SQL"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="9fa17532-a87f-4a38-bc34-7364af086e80"
+        name="Banco de dados de Usuários"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <providedInterface
+            Id="51600198-c2eb-41cb-a9e3-fbfe28a54495"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="5a7815ea-506a-498e-9eb5-b44ddf94568f"
+                LastKnownName="SQL"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </providedInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="e6d5e566-ed57-4813-a7d4-63a246a96c7a"
+        name="IAuthenticationService"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="ab3cd7b9-a4d7-4dec-b6db-b089e9c93ad5"
+        name="IAccountManagement"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="745915df-258f-4c0d-8c79-21b01ba688a8"
+        name="IAccountManagement"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="6a75b4fe-0eef-4146-b9bd-b6681fd06004"
+        name="Component1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="134f5ad1-be3c-4c8e-a294-31dad288f9c3"
+        name="Component2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedAttributesInternal>
+          <requiredInterface
+            Id="8bc3b89c-979c-4080-8ebd-d99bb9cd2c21"
+            name="Port1"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false"
+            isService="false"
+            isBehavior="false">
+            <type_NamedElement>
+              <interfaceMoniker
+                Id="7aa1c914-e03f-4ed2-8749-252585aacb14"
+                LastKnownName="IAuthenticationService"
+                LastKnownLocation="ModelingProject.uml" />
+            </type_NamedElement>
+          </requiredInterface>
+        </ownedAttributesInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="7aa1c914-e03f-4ed2-8749-252585aacb14"
+        name="IAuthenticationService"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="bf3c4ff3-6a53-4501-b448-742d5beccf65"
+        name="IAuthenticationService"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="58d6eb4f-788d-4e0e-9000-8d6664e084cb"
+        name="SQL"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="5a7815ea-506a-498e-9eb5-b44ddf94568f"
+        name="SQL"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>
