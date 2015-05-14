@@ -36,6 +36,13 @@
       <SubType>Content</SubType>
       <DependentUpon>UMLComponentDiagram1.componentdiagram</DependentUpon>
     </Content>
+    <Content Include="UMLSequenceDiagram1.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="UMLSequenceDiagram1.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>UMLSequenceDiagram1.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="UMLUseCaseDiagram1.usecasediagram">
       <SubType>Content</SubType>
     </Content>
@@ -47,5 +54,28 @@
     <Content Include="ModelDefinition\ModelingProject.uml">
       <SubType>Content</SubType>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MoneyExtractor.Core\MoneyExtractor.Core.csproj">
+      <Name>MoneyExtractor.Core</Name>
+      <Project>{361e1780-ea1f-4616-b305-bd902159ff4c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\MoneyExtractor.UI\MoneyExtractor.UI.csproj">
+      <Name>MoneyExtractor.UI</Name>
+      <Project>{9494e7b0-63df-4e4f-8e1c-eecf3ac79314}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Validate Include="LayerDiagram.layerdiagram">
+      <SubType>Content</SubType>
+    </Validate>
+    <Validate Include="LayerDiagram.layerdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>LayerDiagram.layerdiagram</DependentUpon>
+    </Validate>
+    <Validate Include="LayerDiagram.layerdiagram.suppressions">
+      <SubType>Content</SubType>
+      <DependentUpon>LayerDiagram.layerdiagram</DependentUpon>
+    </Validate>
   </ItemGroup>
 </Project>

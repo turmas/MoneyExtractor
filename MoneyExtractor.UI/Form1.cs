@@ -1,5 +1,6 @@
 ﻿using MoneyExtractor.Core;
 using MoneyExtractor.Core.Entities;
+using MoneyExtractor.Core.Logs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,14 +20,17 @@ namespace MoneyExtractor.UI {
 
         private void UxBtnPayment_Click(object sender, EventArgs e) {
 
-            MoneyExtractorManager moneyExtractorManger = new MoneyExtractorManager();
+            MoneyExtractorManager moneyExtractorManager = new MoneyExtractorManager();
+
+            moneyExtractorManager.OnProcessorExecuted += moneyExtractorManager_OnProcessorExecuted;
+
             PaymentDataRequest paymentDataRequest = new PaymentDataRequest();
             paymentDataRequest.ProductAmountInCents = long.Parse(this.UxTxtProductAmount.Text);
             paymentDataRequest.PaidAmountInCents = long.Parse(this.UxTxtPaidAmount.Text);
 
-            PaymentDataResponse paymentDataResponse = moneyExtractorManger.SellProduct(paymentDataRequest);
-
-            this.UxTxtChange.Text = paymentDataResponse.Message;
+            PaymentDataResponse paymentDataResponse = moneyExtractorManager.SellProduct(paymentDataRequest);
+            
+            this.UxTxtChange.AppendText(paymentDataResponse.Message ?? string.Empty);
             if (paymentDataResponse.ChangeData != null) {
 
                 String changeInfo = string.Format("Valor do troco: {0}\r\n", ((decimal)paymentDataResponse.TotalAmountInCents / 100).ToString("N2"));
@@ -39,8 +43,13 @@ namespace MoneyExtractor.UI {
                     }
                 }
 
-                this.UxTxtChange.Text = this.UxTxtChange.Text + changeInfo;
+                this.UxTxtChange.AppendText(changeInfo);
             }
+        }
+
+        void moneyExtractorManager_OnProcessorExecuted(object sender, string e) {
+
+            this.UxTxtChange.AppendText(e + Environment.NewLine);
         }
     }
 }

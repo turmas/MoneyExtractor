@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<layerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="459a77fa-f6f3-4ff2-becf-91491aed6c7d" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/LayerDesigner">
+  <layers>
+    <layer Id="b9c62405-e238-40ac-b3fd-becb9b1e04f8" name="Log">
+      <references>
+        <reference Id="1dfccbc7-4b12-4c24-942b-134db22d0803" name="Logs">
+          <ArtifactNode Label="Logs" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/visual studio 2013/Projects/MoneyExtractor/MoneyExtractor.Core/MoneyExtractor.Core.csproj&quot; File=&quot;$(PersonalUri)/visual studio 2013/Projects/MoneyExtractor/MoneyExtractor.Core/Logs/&quot;)">
+            <Category Ref="ProjectFolder" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=MoneyExtractor.Core Namespace=MoneyExtractor.Core.Logs Type=EventViewerLog)" Label="EventViewerLog" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=MoneyExtractor.Core Namespace=MoneyExtractor.Core.Logs Type=FileLog)" Label="FileLog" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=MoneyExtractor.Core Namespace=MoneyExtractor.Core.Logs Type=ILog)" Label="ILog" Category="CodeSchema_Interface">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=MoneyExtractor.Core Namespace=MoneyExtractor.Core.Logs Type=LogFactory)" Label="LogFactory" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=MoneyExtractor.Core Namespace=MoneyExtractor.Core.Logs Type=LogManager)" Label="LogManager" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=MoneyExtractor.Core Namespace=MoneyExtractor.Core.Logs Type=LogType)" Label="LogType" Category="CodeSchema_Enum">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="5f39a1c4-a0a0-4ba5-ad59-e4a215c1b04e" name="Processors">
+      <references>
+        <reference Id="9133811d-1cbf-47ea-b31b-9d57dfd5ae99" name="Processors">
+          <ArtifactNode Label="Processors" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/visual studio 2013/Projects/MoneyExtractor/MoneyExtractor.Core/MoneyExtractor.Core.csproj&quot; File=&quot;$(PersonalUri)/visual studio 2013/Projects/MoneyExtractor/MoneyExtractor.Core/Processors/&quot;)">
+            <Category Ref="ProjectFolder" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=MoneyExtractor.Core Namespace=MoneyExtractor.Core.Processors Type=AbstractProcessor)" Label="AbstractProcessor" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=MoneyExtractor.Core Namespace=MoneyExtractor.Core.Processors Type=BillProcessor)" Label="BillProcessor" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=MoneyExtractor.Core Namespace=MoneyExtractor.Core.Processors Type=CandyProcessor)" Label="CandyProcessor" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=MoneyExtractor.Core Namespace=MoneyExtractor.Core.Processors Type=CoinProcessor)" Label="CoinProcessor" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=MoneyExtractor.Core Namespace=MoneyExtractor.Core.Processors Type=ProcessorFactory)" Label="ProcessorFactory" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+          <ExpandedNode Id="(Assembly=MoneyExtractor.Core Namespace=MoneyExtractor.Core.Processors Type=SilverProcessor)" Label="SilverProcessor" Category="CodeSchema_Class">
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="9577c137-63ae-443f-bdd7-a55540b2f34e" name="UI">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="577f85e0-56e5-4a5e-96fd-268d6ed3470d" direction="Forward">
+          <layerMoniker Id="1aa86f50-ad9d-4f11-8e6e-275d6dcc3759" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <references>
+        <reference Id="c7ccc609-3d63-46cf-a26f-c82dd893fe49" name="MoneyExtractor.UI">
+          <ArtifactNode Label="MoneyExtractor.UI" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/visual studio 2013/Projects/MoneyExtractor/MoneyExtractor.UI/MoneyExtractor.UI.csproj&quot;)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=MoneyExtractor.UI)" Label="MoneyExtractor.UI.exe" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.exe" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+    <layer Id="1aa86f50-ad9d-4f11-8e6e-275d6dcc3759" name="Core&#xD;&#xA;">
+      <dependencyToLayers>
+        <dependencyFromLayerToLayer Id="9ccdd815-c689-434a-b6a4-88fdc1537a6c" direction="Bidirectional">
+          <layerMoniker Id="b9c62405-e238-40ac-b3fd-becb9b1e04f8" />
+        </dependencyFromLayerToLayer>
+        <dependencyFromLayerToLayer Id="2d7f1fe4-01fa-42df-916d-ec1cbf45bd0d" direction="Bidirectional">
+          <layerMoniker Id="5f39a1c4-a0a0-4ba5-ad59-e4a215c1b04e" />
+        </dependencyFromLayerToLayer>
+      </dependencyToLayers>
+      <childLayers>
+        <layer Id="446d829b-85c2-476b-bebb-2522303433d1" name="Entities">
+          <references>
+            <reference Id="0b285181-9987-4d6d-83c6-c89519835701" name="Entities">
+              <ArtifactNode Label="Entities" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/visual studio 2013/Projects/MoneyExtractor/MoneyExtractor.Core/MoneyExtractor.Core.csproj&quot; File=&quot;$(PersonalUri)/visual studio 2013/Projects/MoneyExtractor/MoneyExtractor.Core/Entities/&quot;)">
+                <Category Ref="ProjectFolder" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=MoneyExtractor.Core Namespace=MoneyExtractor.Core.Entities Type=AbstractRequest)" Label="AbstractRequest" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=MoneyExtractor.Core Namespace=MoneyExtractor.Core.Entities Type=AbstractResponse)" Label="AbstractResponse" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=MoneyExtractor.Core Namespace=MoneyExtractor.Core.Entities Type=ChangeData)" Label="ChangeData" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=MoneyExtractor.Core Namespace=MoneyExtractor.Core.Entities Type=ChangeType)" Label="ChangeType" Category="CodeSchema_Enum">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=MoneyExtractor.Core Namespace=MoneyExtractor.Core.Entities Type=ErrorReport)" Label="ErrorReport" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=MoneyExtractor.Core Namespace=MoneyExtractor.Core.Entities Type=PaymentDataRequest)" Label="PaymentDataRequest" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=MoneyExtractor.Core Namespace=MoneyExtractor.Core.Entities Type=PaymentDataResponse)" Label="PaymentDataResponse" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+        <layer Id="07e892c0-6ba3-4f13-aa76-74a9413c0e09" name="Utility">
+          <references>
+            <reference Id="885fce0d-32d8-4578-a68d-ae1ae464269a" name="Utility">
+              <ArtifactNode Label="Utility" Category="CodeSchema_ProjectItem" Id="(Assembly=&quot;$(PersonalUri)/visual studio 2013/Projects/MoneyExtractor/MoneyExtractor.Core/MoneyExtractor.Core.csproj&quot; File=&quot;$(PersonalUri)/visual studio 2013/Projects/MoneyExtractor/MoneyExtractor.Core/Utility/&quot;)">
+                <Category Ref="ProjectFolder" />
+              </ArtifactNode>
+              <ExpandedNode Id="(Assembly=MoneyExtractor.Core Namespace=MoneyExtractor.Core.Utility Type=ConfigurationUtility)" Label="ConfigurationUtility" Category="CodeSchema_Class">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+              <ExpandedNode Id="(Assembly=MoneyExtractor.Core Namespace=MoneyExtractor.Core.Utility Type=IConfigurationUtility)" Label="IConfigurationUtility" Category="CodeSchema_Interface">
+                <LinkCategory Ref="Represents" />
+              </ExpandedNode>
+            </reference>
+          </references>
+        </layer>
+      </childLayers>
+      <references>
+        <reference Id="3006a1fa-bd5b-4cc9-8a89-ef84a4ee1192" name="MoneyExtractor.Core">
+          <ArtifactNode Label="MoneyExtractor.Core" Category="CodeSchema_Project" Id="(Assembly=&quot;$(PersonalUri)/visual studio 2013/Projects/MoneyExtractor/MoneyExtractor.Core/MoneyExtractor.Core.csproj&quot;)">
+            <Category Ref="File" />
+          </ArtifactNode>
+          <ExpandedNode Id="(Assembly=MoneyExtractor.Core)" Label="MoneyExtractor.Core.dll" Category="CodeSchema_Assembly">
+            <Category Ref="FileSystem.Category.FileOfType.dll" />
+            <LinkCategory Ref="Produces" />
+            <LinkCategory Ref="Represents" />
+          </ExpandedNode>
+        </reference>
+      </references>
+    </layer>
+  </layers>
+</layerModel>

@@ -12,10 +12,17 @@ using System.Threading.Tasks;
 
 namespace MoneyExtractor.Core {
 
+    public delegate void ProcessorCompletedEventHandler(object sender, string e);
+
     /// <summary>
     /// Gerenciador do pagamento
     /// </summary>
     public class MoneyExtractorManager {
+
+        /// <summary>
+        /// Evento a ser disparado após a execução de um processador.
+        /// </summary>
+        public event ProcessorCompletedEventHandler OnProcessorExecuted;
 
         public MoneyExtractorManager() {
 
@@ -84,6 +91,9 @@ namespace MoneyExtractor.Core {
                     }
 
                     Dictionary<long, long> calculateChangeResult = processor.CalculateChange(change);
+
+                    // Dispara o evento.
+                    if (this.OnProcessorExecuted != null) { this.OnProcessorExecuted(this, processor.GetName()); }
 
                     changeTotalResult.Add(processor.GetChangeType(), calculateChangeResult);
 

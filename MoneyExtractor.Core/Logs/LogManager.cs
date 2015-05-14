@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Dlp.Framework;
 using MoneyExtractor.Core.Utility;
 using Dlp.Framework.Container;
+using MoneyExtractor.Core.Processors;
 
 namespace MoneyExtractor.Core.Logs {
 
